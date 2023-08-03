@@ -23,7 +23,6 @@ export class AppComponent implements OnInit{
     translate.addLangs(['en', 'nl','tn']);
     translate.setDefaultLang('en');
    
-   
   }
   ngOnInit(): void {
    
@@ -44,6 +43,6 @@ export class AppComponent implements OnInit{
   switchLang(lang: string) {
     console.log(lang,"current language")
     this.translate.use(lang);
-    // localStorage.setItem('selectedLanguage', lang);
+    localStorage.setItem('selectedLanguage', lang);
   }
 }
